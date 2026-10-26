@@ -1,0 +1,31 @@
+.hero h2.rotating-tagline {
+  display: grid;
+  overflow: hidden;
+  font-size: 2rem;
+  line-height: 1.35;
+}
+/* Reserve space for every phrase, including wrapped lines. */
+.rotating-tagline > span {
+  grid-area: 1 / 1;
+  align-self: center;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  opacity: 0;
+  transform: translateY(110%);
+}
+.rotating-tagline > .active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 650ms ease, opacity 450ms ease;
+}
+.rotating-tagline > .leaving {
+  opacity: 0;
+  transform: translateY(-110%);
+  transition: transform 650ms ease, opacity 350ms ease;
+}
+@media (max-width: 640px) {
+  .hero h2.rotating-tagline { font-size: 1.45rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rotating-tagline > span { transition: none !important; }
+}
