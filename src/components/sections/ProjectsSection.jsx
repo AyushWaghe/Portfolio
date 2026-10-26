@@ -30,15 +30,17 @@ function ProjectCard({ project, onOpenDemo }) {
         <p>{project.description}</p>
         {project.details.map((detail) => <p className="project-detail" key={detail}>{detail}</p>)}
         <TagCloud items={project.stack} />
-        {(project.detailsPath || project.demo || hasGithub || hasLive) && (
+        {(project.detailsPath || project.detailsUrl || project.demo || hasGithub || hasLive) && (
           <div className="project-links">
-            {project.detailsPath && (
+            {(project.detailsPath || project.detailsUrl) && (
               <a
                 className="project-details-link"
-                href={project.detailsPath}
-                onClick={() => window.sessionStorage.setItem("portfolioReturnSection", "projects")}
+                href={project.detailsPath || project.detailsUrl}
+                target={project.detailsUrl ? "_blank" : undefined}
+                rel={project.detailsUrl ? "noopener noreferrer" : undefined}
+                onClick={project.detailsPath ? () => window.sessionStorage.setItem("portfolioReturnSection", "projects") : undefined}
               >
-                <FileText size={17} /> View details <ArrowRight size={16} />
+                {project.detailsUrl ? <ExternalLink size={17} /> : <FileText size={17} />} View details <ArrowRight size={16} />
               </a>
             )}
             {project.demo && (

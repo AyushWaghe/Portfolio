@@ -205,7 +205,8 @@ export const projects = {
       details: [],
       stack: ["Machine Learning", "Research", "Scientific Reports"],
       imageSrc: "/projects/banana-plant-health.png",
-      imageAlt: "Banana plants growing in a field"
+      imageAlt: "Banana plants growing in a field",
+      detailsUrl: "https://www.nature.com/articles/s41598-024-63930-y"
     }
   ]
 };
