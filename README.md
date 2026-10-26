@@ -18,8 +18,8 @@ Push this folder to a Git repository, then import that repository in Vercel. Use
 - Root directory: repository root
 - Environment variables: none required
 
-The `vercel.json` rewrite keeps direct links to the project documentation pages working. The Savings Saga demo streams from Google Drive; the video file is not part of the deployment. Keep its sharing set to "Anyone with the link - Viewer" and confirm Drive has finished processing it before publishing.
+The `vercel.json` rewrite keeps direct links to the project documentation pages working. The Savings Saga and Fin Guru demos stream from Google Drive; the video files are not part of the deployment. Keep both videos shared as "Anyone with the link - Viewer" and confirm Drive has finished processing them before publishing.
 
 The resume and certificate files in `public/` are intentionally public and downloadable. The two project documentation `.docx` files at the repository root are excluded by `.gitignore` and stay on your computer.
 
-To add a second project video later, add its thumbnail under `public/projects/` and add a `demo` object with `embedUrl` and `watchUrl` to that project in `src/data/portfolioData.js`.
+To update a project video later, replace its thumbnail under `public/projects/` and edit its `demo` object with `embedUrl` and `watchUrl` in `src/data/portfolioData.js`.

@@ -35,6 +35,7 @@ export const education = [
 export const skills = {
   Languages: [
     { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/java/java-original.svg", symbol: "Coffee" },
+    { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg", symbol: "Code" },
     { name: "SQL", symbol: "Database" },
     { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg", symbol: "Braces" }
   ],
@@ -167,7 +168,12 @@ export const projects = {
       description: "Spring AI-powered assistant for transaction analysis, bill-management actions, and document Q&A using a production-oriented RAG pipeline.",
       details: ["Designed hybrid BM25 and vector retrieval with Qdrant, metadata filtering, reranking, async retrieval, dynamic chunking, and evaluation metrics."],
       stack: ["Spring AI", "Spring Boot", "PostgreSQL", "Qdrant", "RAG"],
-      image: "FG",
+      imageSrc: "/projects/fin-guru/demo-thumbnail.png",
+      imageAlt: "Fin Guru demo thumbnail",
+      demo: {
+        embedUrl: "https://drive.google.com/file/d/1eV8FdAOqgE7y7lT-6GF40aTC8jyfNWmQ/preview",
+        watchUrl: "https://drive.google.com/file/d/1eV8FdAOqgE7y7lT-6GF40aTC8jyfNWmQ/view?usp=sharing"
+      },
       detailsPath: "/projects/fin-guru"
     }
   ],
